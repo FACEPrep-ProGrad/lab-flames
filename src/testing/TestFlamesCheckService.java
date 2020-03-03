@@ -1,5 +1,5 @@
 package testing;
-/* Uncomment the below code to test your application
+/* Uncomment the below code to test your application*/
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -50,4 +50,4 @@ public class TestFlamesCheckService {
 			e.printStackTrace();
 		}
 	}
-}*/
+}
