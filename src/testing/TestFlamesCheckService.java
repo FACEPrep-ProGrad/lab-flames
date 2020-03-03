@@ -1,5 +1,5 @@
 package testing;
-/* Uncomment the below code to test your application
+// Uncomment the below code to test your application
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -16,21 +16,21 @@ public class TestFlamesCheckService {
 		char temp = 'f';
 		assertEquals(temp,fcs.findFlames(name1, name2));
 		
-//		name1 = "Anand";
-//		name2 = "Lavanya";
-//		temp = 'a';
-//		assertEquals(temp,fcs.findFlames(name1, name2));
+		name1 = "Anand";
+		name2 = "Lavanya";
+		temp = 'a';
+		assertEquals(temp,fcs.findFlames(name1, name2));
 		
 		name1 = "bhuvaneswari";
 		name2 = "abarna";
 		temp = 'a';
 		assertEquals(temp,fcs.findFlames(name1, name2));
 		
-//		name1 = "priyadharshini";
-//		name2 = "karthikeyan";
-//		temp = '';
-//		assertEquals(temp,fcs.findFlames(name1, name2));
-//		
+		name1 = "priyadharshini";
+		name2 = "karthikeyan";
+		temp = 'm';
+		assertEquals(temp,fcs.findFlames(name1, name2));
+		
 		name1 = "bhuvana";
 		name2 = "gayathri";
 		temp = 'e';
@@ -50,4 +50,4 @@ public class TestFlamesCheckService {
 			e.printStackTrace();
 		}
 	}
-}*/
+}
