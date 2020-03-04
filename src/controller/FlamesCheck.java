@@ -38,8 +38,8 @@ public class FlamesCheck extends HttpServlet {
 
 		
 		 // Uncomment the below code to test your output 
-		  String name1 = request.getParameter("your"); 
-		 String name2 = request.getParameter("crush");
+		  String name1 = request.getParameter("your name"); 
+		 String name2 = request.getParameter("crush name");
 		  
 		  FlamesCheckService fcs = new FlamesCheckService();
 		 

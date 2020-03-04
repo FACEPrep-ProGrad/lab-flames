@@ -12,42 +12,43 @@ public class FlamesCheckService
 {
 	public  static char findFlames(String name1,String name2)
 	{
-		StringBuffer s1=new StringBuffer(name1);
-		StringBuffer s2=new StringBuffer(name2);
-		int a=s1.length();
-		int b=s2.length();
+		StringBuffer string1=new StringBuffer(name1);
+		StringBuffer string2=new StringBuffer(name2);
+		int value1=string1.length();
+		int value2=string2.length();
 		
 		
 		
 		
-		label: for(int i=0;i<a;i++)
+		label: for(int i=0;i<value1;i++)
 		{
-			char c=s1.charAt(i);
+			char c=string1.charAt(i);
 		
-			for(int j=0;j<b;j++)
+			for(int j=0;j<value2;j++)
 			{
-				char d=s2.charAt(j);
+				char d=string2.charAt(j);
 				if(c==d)
 				{
 					 
-					 s1.deleteCharAt(i);
-					 s2.deleteCharAt(j);
+					 string1.deleteCharAt(i);
+					 string2.deleteCharAt(j);
 					
-					 a=s1.length();
+					 value1=string1.length();
 					
-					 b=s2.length();
+					 value2=string2.length();
 					 i=0;
 					 j=0;
-					// continue label;
+					
+
 				}
 			}
 
 		}
 		
 		
-		int d=(a+b);
-		  StringBuffer s3=new StringBuffer("flames");
-		  String s4=new String();
+		int d=(value1+value2);
+		  StringBuffer string3=new StringBuffer("flames");
+		  String string4=new String();
 		  
 		  
 		  label1 :	for(int i=0;i<5;i++)
@@ -57,39 +58,39 @@ public class FlamesCheckService
 				n++;
 				l++;
 				
-				if(n>s3.length()-1)
+				if(n>string3.length()-1)
 					{
-					char e=s3.charAt(p);
+					char e=string3.charAt(p);
 					if(l==d)
 						{
-						s3.deleteCharAt(p);
+						string3.deleteCharAt(p);
 						
-						s4=s3.substring(p,s3.length());
+						string4=string3.substring(p,string3.length());
 						
-						s3.delete(p,s3.length());
+						string3.delete(p,string3.length());
 						
-						s3.insert(0,s4);
+						string3.insert(0,string4);
 						
 						break;
 						}
 						else{ p++;
-						     if(p==s3.length())
+						     if(p==string3.length())
 						     {p=0;
 						     }
 	                        }
 					}
 				else
 					{
-					char e=s3.charAt(n);
+					char e=string3.charAt(n);
 					if(l==d)
 						{
-						s3.deleteCharAt(n);
+						string3.deleteCharAt(n);
 
-						s4=s3.substring(n,s3.length());
+						string4=string3.substring(n,string3.length());
 					
-						s3.delete(n,s3.length());
+						string3.delete(n,string3.length());
 				    	
-						s3.insert(0,s4);
+						string3.insert(0,string4);
 					
 				    	break;
 						}
@@ -100,7 +101,7 @@ public class FlamesCheckService
 	   		 }
 		  
 		  
-		  char result=s3.charAt(0);
+		  char result=string3.charAt(0);
 		  return result;
 		    
 		
