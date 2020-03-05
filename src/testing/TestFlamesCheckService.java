@@ -1,10 +1,11 @@
 package testing;
 // Uncomment the below code to test your application
+import service.FlamesCheckService;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import service.FlamesCheckService;
+
 
 public class TestFlamesCheckService {
 	FlamesCheckService fcs = new FlamesCheckService();
@@ -16,7 +17,7 @@ public class TestFlamesCheckService {
 		char temp = 'f';
 		assertEquals(temp,fcs.findFlames(name1, name2));
 		
-		name1 = "Anand";
+	name1 = "Anand";
 		name2 = "Lavanya";
 		temp = 'a';
 		assertEquals(temp,fcs.findFlames(name1, name2));
@@ -28,7 +29,7 @@ public class TestFlamesCheckService {
 		
 		name1 = "priyadharshini";
 		name2 = "karthikeyan";
-		temp = 'm';
+		temp = ' ';
 		assertEquals(temp,fcs.findFlames(name1, name2));
 		
 		name1 = "bhuvana";

@@ -1,5 +1,6 @@
 package controller;
-import service.*;
+import service.FlamesCheckService;
+
 
 /*
 1.Do not modify the existing code at any point or you will not get output.
@@ -13,8 +14,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import service.FlamesCheckService;
 
 
 
@@ -38,18 +37,18 @@ public class FlamesCheck extends HttpServlet {
 
 		
 		 // Uncomment the below code to test your output 
-		  String name1 = request.getParameter("your name"); 
-		 String name2 = request.getParameter("crush name");
+		  String name1 = request.getParameter("your"); 
+		  String name2 = request.getParameter("crush");
 		  
 		  FlamesCheckService fcs = new FlamesCheckService();
-		 
+		  
 		  char k = fcs.findFlames(name1,name2);
 		  
 		  if (k == 'f') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/friends.jsp"
 		  ); rd.forward(request, response);
 		 
-		 } else if (k == 'l') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/lovers.jsp")
-		 ; rd.forward(request, response);
+		  } else if (k == 'l') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/lovers.jsp")
+		  ; rd.forward(request, response);
 		 
 		  } else if (k == 'a') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher(
 		  "/WEB-INF/views/affection.jsp"); rd.forward(request, response);
