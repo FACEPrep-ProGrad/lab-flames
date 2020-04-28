@@ -39,6 +39,9 @@ public class FlamesCheckService{
 		char ch;
 		int x=0;
 		StringBuffer flames = new StringBuffer(f);
+		
+		//count holds a number of uncommon characters
+		
 		if(count > flames.length()) {
 			 x = count % flames.length();
 			 x=x-1;
