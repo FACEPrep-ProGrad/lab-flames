@@ -9,6 +9,9 @@ package service;
 public class FlamesCheckService{
 	public char findFlames(String name1, String name2) {
 		
+		name1 = name1.trim().toLowerCase();
+		name2 = name2.trim().toLowerCase();
+		
 		StringBuilder n1 =new StringBuilder(name1);
 		StringBuilder n2 = new StringBuilder(name2);
 		
