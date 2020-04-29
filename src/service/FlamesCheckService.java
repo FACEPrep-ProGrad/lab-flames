@@ -56,20 +56,22 @@ public class FlamesCheckService{
 			 ch =f.charAt(count-1);
 		}*/
 		
-		if(count !=0) {
+		if((count !=0) && (count !=flames.length())) {
 			if(count > flames.length()) {
 				 x = (count-1) % flames.length();
 				 //x=x-1;
 				 ch =f.charAt(x);
 			}
-			else if(count == flames.length()) {
-				int c = count-1;
-				ch = f.charAt(c);
-			}
+			
 			else {
 				 ch =f.charAt(count-1);
 			}
 		}
+		else if(count == (flames.length())) {
+			
+			ch = f.charAt(5);
+		}
+		
 		else {
 			ch =f.charAt(0);
 		}
