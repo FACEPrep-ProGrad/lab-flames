@@ -29,8 +29,9 @@ public class FlamesCheckService{
 					n2.deleteCharAt(j);
 					sn1 = n1.length();	
 					sn2 = n2.length();
-					i=0;
-					j=0;
+					i--;
+					j--;
+					break;
 				}
 			}
 		}
@@ -41,7 +42,7 @@ public class FlamesCheckService{
 		StringBuffer flames = new StringBuffer(f);
 		
 		//count holds a number of uncommon characters
-		
+		/*
 		if(count > flames.length()) {
 			 x = count % flames.length();
 			 x=x-1;
@@ -53,7 +54,26 @@ public class FlamesCheckService{
 		}
 		else {
 			 ch =f.charAt(count-1);
+		}*/
+		
+		if(count !=0) {
+			if(count > flames.length()) {
+				 x = (count-1) % flames.length();
+				 //x=x-1;
+				 ch =f.charAt(x);
+			}
+			else if(count == flames.length()) {
+				int c = count-1;
+				ch = f.charAt(c);
+			}
+			else {
+				 ch =f.charAt(count-1);
+			}
 		}
+		else {
+			ch =f.charAt(0);
+		}
+		
 		System.out.println("count :"+count);
 		System.out.println("Your name is "+name1);
 		System.out.println("Your Partner name is "+name2);
