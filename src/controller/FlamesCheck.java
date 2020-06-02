@@ -6,6 +6,7 @@ package controller;
 */
 import java.io.IOException;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +14,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import service.FlamesCheckService;
+
+//There is a link error, your program must be right, Submit it in Git, I will check
 
 
 @WebServlet("/flames")
@@ -33,35 +37,35 @@ public class FlamesCheck extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		/*
-		 * Uncomment the below code to test your output 
-		 * String name1 = request.getParameter("your"); 
-		 * String name2 = request.getParameter("crush");
-		 * 
-		 * FlamesCheckService fcs = new FlamesCheckService();
-		 * 
-		 * char k = fcs.findFlames(name1,name2);
-		 * 
-		 * if (k == 'f') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/friends.jsp"
-		 * ); rd.forward(request, response);
-		 * 
-		 * } else if (k == 'l') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/lovers.jsp")
-		 * ; rd.forward(request, response);
-		 * 
-		 * } else if (k == 'a') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher(
-		 * "/WEB-INF/views/affection.jsp"); rd.forward(request, response);
-		 * 
-		 * } else if (k == 'm') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher(
-		 * "/WEB-INF/views/marriage.jsp"); rd.forward(request, response);
-		 * 
-		 * } else if (k == 'e') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/enemies.jsp"
-		 * ); rd.forward(request, response);
-		 * 
-		 * } else if (k == 's') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher(
-		 * "/WEB-INF/views/siblings.jsp"); rd.forward(request, response);
-		 * 
-		 * }
-		 */
+		
+		 
+		  String name1 = request.getParameter("your"); 
+		  String name2 = request.getParameter("crush");
+		  
+		  FlamesCheckService fcs = new FlamesCheckService();
+		  
+		  char k = fcs.findFlames(name1,name2);
+		  
+		  if (k == 'f') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/friends.jsp"
+		  ); rd.forward(request, response);
+		  
+		  } else if (k == 'l') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/lovers.jsp")
+		  ; rd.forward(request, response);
+		  
+		  } else if (k == 'a') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher(
+		  "/WEB-INF/views/affection.jsp"); rd.forward(request, response);
+		  
+		  } else if (k == 'm') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher(
+		  "/WEB-INF/views/marriage.jsp"); rd.forward(request, response);
+		  
+		  } else if (k == 'e') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/enemies.jsp"
+		  ); rd.forward(request, response);
+		  
+		  } else if (k == 's') { RequestDispatcher rd=this.getServletContext().getRequestDispatcher(
+		  "/WEB-INF/views/siblings.jsp"); rd.forward(request, response);
+		  
+		  }
+		 
 	}
 
 }
