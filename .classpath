@@ -8,10 +8,9 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_241">
-		<attributes>
-			<attribute name="owner.project.facets" value="java"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/academic/Desktop/ProGrad-Java-Workspace/tomcat-servlet-api-9.0.4.jar"/>
+	<classpathentry kind="lib" path="/home/academic/Desktop/ProGrad-Java-Workspace/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="/home/academic/Desktop/ProGrad-Java-Workspace/junit-4.12.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
